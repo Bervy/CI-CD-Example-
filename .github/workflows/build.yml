@@ -24,7 +24,8 @@ jobs:
         run: mvn -B clean verify
 
 #       Upload code coverage report to Codecov
-      - name: Test Coverage
-        uses: codecov/codecov-action@v1
-        with:
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        env:
           token: ${{ secrets.CODECOV_TOKEN }}
+          slug: Bervy/CI-CD-Example-
